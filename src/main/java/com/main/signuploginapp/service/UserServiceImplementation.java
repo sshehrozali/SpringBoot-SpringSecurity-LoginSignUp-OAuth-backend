@@ -1,11 +1,11 @@
-package service;
+package com.main.signuploginapp.service;
 
-import entity.User;
-import model.UserModel;
+import com.main.signuploginapp.entity.User;
+import com.main.signuploginapp.model.UserModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-import repository.UserRepository;
+import com.main.signuploginapp.repository.UserRepository;
 
 @Service
 public class UserServiceImplementation implements UserService {

@@ -1,4 +1,4 @@
-package entity;
+package com.main.signuploginapp.entity;
 
 import javax.persistence.*;
 

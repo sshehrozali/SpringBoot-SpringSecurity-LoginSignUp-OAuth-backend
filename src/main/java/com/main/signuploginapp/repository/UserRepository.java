@@ -1,6 +1,6 @@
-package repository;
+package com.main.signuploginapp.repository;
 
-import entity.User;
+import com.main.signuploginapp.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
