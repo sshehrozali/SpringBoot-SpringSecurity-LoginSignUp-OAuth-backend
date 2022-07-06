@@ -15,9 +15,14 @@ public class UserServiceImplementation implements UserService {
     private PasswordEncoder passwordEncoder;
     @Override
     public String createUser(UserModel newUserData) {
-        User newUser = new User();
+        User newUser = new User();  // Created new User entity
+
+        // Get incoming model data and sets it to entity
         newUser.setEmail(newUserData.getIncoming_email());
         newUser.setName(newUserData.getIncoming_name());
-        newUser.setPassword(newUserData.getIncoming_password());
+        newUser.setPassword(passwordEncoder.encode(newUserData.getIncoming_password()));
+
+        userRepository.save(newUser);   // Save to database
+        return "User Saved!";
     }
 }
