@@ -26,4 +26,15 @@ public class UserServiceImplementation implements UserService {
         userRepository.save(newUser);   // Save to database
         return "User Saved!";
     }
+
+    @Override
+    public User findUserByEmail(String email) {
+        User user = userRepository.findByEmail(email);  // Finds user by Email (Custom method to search user by email)
+        return user;
+    }
+
+    @Override
+    public void createResetPasswordToken(User user, String token) {
+
+    }
 }
