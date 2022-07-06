@@ -16,6 +16,7 @@ public class UserController {
 
     @PostMapping("/register")
     public String register(@RequestBody UserModel newUserData) {
-
+        String res = userService.createUser(newUserData);
+        return res;
     }
 }
