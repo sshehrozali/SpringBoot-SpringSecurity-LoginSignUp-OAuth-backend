@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class UserModel {
+    private String incoming_name;
     private String incoming_email;
     private String incoming_password;
 }
