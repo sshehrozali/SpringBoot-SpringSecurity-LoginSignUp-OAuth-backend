@@ -1,5 +1,6 @@
 package com.main.signuploginapp.service;
 
+import com.main.signuploginapp.entity.PasswordResetToken;
 import com.main.signuploginapp.entity.User;
 import com.main.signuploginapp.model.UserModel;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,6 +36,6 @@ public class UserServiceImplementation implements UserService {
 
     @Override
     public void createResetPasswordToken(User user, String token) {
-
+        PasswordResetToken passwordResetToken = new PasswordResetToken(user, token);
     }
 }
