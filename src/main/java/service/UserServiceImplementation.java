@@ -21,6 +21,7 @@ public class UserServiceImplementation implements UserService {
         newUser.setEmail(newUserData.getIncoming_email());
         newUser.setName(newUserData.getIncoming_name());
         newUser.setPassword(passwordEncoder.encode(newUserData.getIncoming_password()));
+        newUser.setAccess(false);   // Disables User already
 
         userRepository.save(newUser);   // Save to database
         return "User Saved!";
